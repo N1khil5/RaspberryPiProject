@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title>Best Tickets</title>
+	<script>
+
+
+</head>
+<style>
+	body{background-color: white;}
+	h1{color: black; text-align: center; background-color: white;}
+	h3{text-align: justify;}
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td,th {
+	border: 1 px solid;
+	text-align: left;
+	padding: 8 px;
+}
+
+</style>
+<body>
+  <img src = "//home/pi/Downloads/ticket-seeklogo.com.eps" alt="Best tickets logo">
+  <h1>Best Tickets</h1>
+<div class ="BestTickets-top">
+	<div class ="column" align="left">
+		<a href="#" class="BestTicket-top">Home</a>
+<h3>Pick your tickets from the selection below </h3>
+
+<table>
+
+<tr>
+<th>Ticket 1 </th>
+<th><button type="Button">Buy Tickets</button></th>
+</tr>
+
+<tr>
+<th> Ticket 2 </th>
+<th><button type="Button">Buy Tickets</button> </th>
+</tr>
+
+<tr>
+<th>Ticket 3 </th>
+<th><button type="Button">Buy Tickets</button> </th>
+</table>
+
+</body>
+
+</html>

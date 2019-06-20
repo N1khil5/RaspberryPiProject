@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title>Best Tickets</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript" src="jspdf.min.js"> </script>
+  	  
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Nikhil Suresh">  
+  <script type="text/javascript" >
+
+  function scan() {
+        var scans = document.getElementById("ticketID").value;  
+	console.log(scans);
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if(this.readyState == 4 && this.status == 200) {
+			var ticketID = this.responseText;
+			console.log(this.responseText);
+			alert(this.responseText);
+		}
+	}
+		xhttp.open("POST", "ticketSelect.php?q=" + scans, true);
+		xhttp.send();
+  }
+  </script> 
+
+</head>
+<style>
+body { padding-top: 56px;}
+
+</style>
+<body>
+	
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Best Tickets</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+<!--
+            //<a class="nav-link" href="#">About</a>
+-->
+          <li class="nav-item">
+            <a class="nav-link" href="/scanTicket.html">Scan Ticket</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-lg-3">
+
+        <h1 class="my-4">Scan your tickets here!</h1>
+
+      </div>
+      <!-- /.col-lg-3 -->
+
+      <div class="col-lg-9">
+
+
+        <div class="row">
+
+          <div class="col-lg-6 col-md-6 mb-4">
+            <div class="card h-100">
+              <a><img class="card-img-top" src="tlogo.png" alt=""></a>
+              <div class="card-body">
+          </div>
+	    
+	    Ticket ID number:<br>
+	    <br>
+	    <input type="text" target="_blank" id="ticketID" required><br>
+	    <br>
+	    <br>
+	    <button onclick="scan()">Submit</button>
+	    <br>
+	    <br>
+	    </form>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Nikhil Suresh 2019</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+<script>
+
+</script>
+
+</body>
+
+</html>
